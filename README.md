@@ -5,7 +5,7 @@ This repository provides pipelines for automatically vendoring distfiles require
 ## Go vendor tarballs
 
 To create vendor tarballs,
-simply edit the CI configuration and add a new item to the ``build-vendor`` job matrix.
+simply edit the ``packages.json`` and add a new item to the array.
 The variables ``PN``, ``PV``, ``SRC_URI`` and ``S`` must be specified in the same way as in the ebuild.
 
 [1]: https://github.com/pasha132/x-local-overlay
