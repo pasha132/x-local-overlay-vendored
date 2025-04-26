@@ -23,13 +23,22 @@ jobs:
     needs: [packages-list]
     strategy:
       fail-fast: true
-      matrix:         
+      matrix:
         # PN PV SRC_URI S
         package: ${{ fromJson(needs.packages-list.outputs.matrix) }}
     name: "${{ matrix.package.PN }}-${{ matrix.package.PV }}"
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: cache package
+        id: cache-package
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: dep-archives/
+          key: package-${{ matrix.package.PN }}-${{ matrix.package.PV }}
+
       - name: make-vendortarball
+        if: steps.cache-package.outputs.cache-hit != 'true'
         run: |
           export PN="${{ matrix.package.PN }}"
           export PV="${{ matrix.package.PV }}"
@@ -61,3 +70,11 @@ jobs:
           gh release edit v0.0.0 --draft=false
         env:
             GH_TOKEN: ${{ github.token }}
+      - name: save packages
+        id: cache-primes-save
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            path/to/dependencies
+            some/other/dependencies
+          key: ${{ steps.cache-primes-restore.outputs.cache-primary-key }}
