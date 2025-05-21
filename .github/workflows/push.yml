@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+  schedule:
+    - cron: '30 */12 * * *'
 
 jobs:
   packages-list:
@@ -52,6 +54,7 @@ jobs:
           path: |
             dep-archives/
   push:
+    if: ${{ github.event_name != 'schedule' }}
     runs-on: ubuntu-latest
     needs: build-vendor
     permissions:
