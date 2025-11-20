@@ -13,7 +13,7 @@ jobs:
     outputs:
       matrix: "${{ steps.set-matrix.outputs.matrix }}"
     steps:
-      - uses: actions/checkout@v5.0.1
+      - uses: actions/checkout@v6.0.0
       - id: set-matrix
         run: |
           set -ue
