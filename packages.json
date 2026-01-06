@@ -1,4 +1,6 @@
 [
-  { "PN": "chezmoi", "PV": "2.68.1", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
-  { "PN": "AdGuardHome", "PV": "0.107.71", "SRC_URI": "https://github.com/AdguardTeam/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" }
+  { "PN": "chezmoi", "PV": "2.69.0", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "AdGuardHome", "PV": "0.107.71", "SRC_URI": "https://github.com/AdguardTeam/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "Xray-core", "PV": "25.12.8", "SRC_URI": "https://github.com/XTLS/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "tun2socks", "PV": "2.6.0", "SRC_URI": "https://github.com/xjasonlyu/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" }
 ]
