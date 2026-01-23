@@ -13,7 +13,7 @@ jobs:
     outputs:
       matrix: "${{ steps.set-matrix.outputs.matrix }}"
     steps:
-      - uses: actions/checkout@v6.0.1
+      - uses: actions/checkout@v6.0.2
       - id: set-matrix
         run: |
           set -ue
@@ -30,7 +30,7 @@ jobs:
         package: ${{ fromJson(needs.packages-list.outputs.matrix) }}
     name: "${{ matrix.package.PN }}-${{ matrix.package.PV }}"
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98 # v6.0.1
 
       - name: cache package
         id: cache-package
@@ -60,7 +60,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # 6.0.1
+      - uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98 # 6.0.1
       - name: download artifacts
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
