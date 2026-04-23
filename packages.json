@@ -1,5 +1,5 @@
 [
-  { "PN": "chezmoi", "PV": "2.70.1", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
-  { "PN": "AdGuardHome", "PV": "0.107.73", "SRC_URI": "https://github.com/AdguardTeam/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "chezmoi", "PV": "2.70.2", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "AdGuardHome", "PV": "0.107.74", "SRC_URI": "https://github.com/AdguardTeam/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
   { "PN": "Xray-core", "PV": "26.3.27", "SRC_URI": "https://github.com/XTLS/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" }
 ]
