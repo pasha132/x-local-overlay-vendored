@@ -1,0 +1,21 @@
+name: artifacts
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Validate JSON Syntax
+        run: |
+          find . -name "*.json" -not -path "*/node_modules/*" | while read file; do
+            echo "Checking $file..."
+            node -e "const fs = require('fs'); try { JSON.parse(fs.readFileSync('$file', 'utf8')); } catch (e) { console.error('Invalid JSON in ' + '$file' + ': ' + e.message); process.exit(1); }"
+          done
