@@ -9,7 +9,7 @@ on:
 
 jobs:
   packages-list:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       matrix: "${{ steps.set-matrix.outputs.matrix }}"
     steps:
@@ -55,7 +55,7 @@ jobs:
             dep-archives/
   push:
     if: ${{ github.event_name != 'schedule' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: build-vendor
     permissions:
       contents: write

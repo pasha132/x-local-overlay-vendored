@@ -1,4 +1,4 @@
 [
-  { "PN": "chezmoi", "PV": "2.73.1", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
-  { "PN": "lazygit", "PV": "0.66.1", "SRC_URI": "https://github.com/jesseduffield/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" }
+  { "PN": "chezmoi", "PV": "2.73.3", "SRC_URI": "https://github.com/twpayne/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" },
+  { "PN": "lazygit", "PV": "0.66.2", "SRC_URI": "https://github.com/jesseduffield/${PN}/archive/refs/tags/v${PV}.tar.gz", "S": "${PN}-${PV}" }
 ]
